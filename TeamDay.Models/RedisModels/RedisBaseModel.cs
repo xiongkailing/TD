@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeamDay.Models
+namespace TeamDay.Models.RedisModels
 {
-    public class Class1
+    public abstract class RedisBaseModel
     {
+        public string Id { get; set; }
     }
 }
