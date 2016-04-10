@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiceStack.Redis;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,31 +8,82 @@ using TeamDay.Models.RedisModels;
 
 namespace TeamDay.DAL
 {
-    public class RedisRepository<T>:IRepository<T> where T:RedisBaseModel
+    public class RedisRepository<T> : IRedisRepository<T> where T : RedisBaseModel
     {
-        public void Update(T entity)
+        private readonly IRedisClientsManager _redisClientsManger;
+        private readonly int _id;
+        public RedisRepository(IRedisClientsManager redisClientsManger, int id)
         {
-            throw new NotImplementedException();
+            _redisClientsManger = redisClientsManger;
+            _id = id;
+        }
+        public void Update(T entity, bool isSave = false, DateTime? expireTime = null)
+        {
+            using (var client = _redisClientsManger.GetClient())
+            {
+                client.Db = _id;
+                if (expireTime == null)
+                    client.Set<T>(entity.Id, entity);
+                else
+                {
+                    var date = (DateTime)expireTime;
+                    client.Set<T>(entity.Id, entity, date);
+                }
+                if (isSave)
+                    client.Save();
+            }
         }
 
-        public void Add(T entity)
+        public void Add(T entity, bool isSave = false, DateTime? expireTime = null)
         {
-            throw new NotImplementedException();
+            using (var client = _redisClientsManger.GetClient())
+            {
+                client.Db = _id;
+                if (expireTime == null)
+                    client.Set<T>(entity.Id, entity);
+                else
+                {
+                    var date = (DateTime)expireTime;
+                    client.Set<T>(entity.Id, entity, date);
+                }
+                if (isSave)
+                    client.Save();
+            }
         }
 
-        public void Delete(object Id)
+        public void Delete(string Id)
         {
-            throw new NotImplementedException();
+            using (IRedisClient client = _redisClientsManger.GetClient())
+            {
+                client.Db = _id;
+                client.Remove(Id);
+            }
+
         }
 
-        public IQueryable<T> Get()
+        public IEnumerable<T> Get()
         {
-            throw new NotImplementedException();
+            using (IRedisClient client = _redisClientsManger.GetClient())
+            {
+                client.Db = _id;
+                var keys = client.GetAllKeys();
+                var data = client.GetAll<T>(keys);
+                return data.Values;
+            }
         }
 
-        public T GetByKey(object id)
+        public T GetByKey(string id)
         {
-            throw new NotImplementedException();
+            using (IRedisClient client = _redisClientsManger.GetClient())
+            {
+                client.Db = _id;
+                return client.Get<T>(id);
+            }
+        }
+        public void Dispose()
+        {
+            _redisClientsManger.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }
