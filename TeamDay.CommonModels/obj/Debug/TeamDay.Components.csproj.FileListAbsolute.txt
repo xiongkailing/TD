@@ -1,0 +1,7 @@
+F:\MyWork\TD\TeamDay.CommonModels\bin\Debug\TeamDay.Components.dll
+F:\MyWork\TD\TeamDay.CommonModels\bin\Debug\TeamDay.Components.pdb
+F:\MyWork\TD\TeamDay.CommonModels\bin\Debug\NLog.dll
+F:\MyWork\TD\TeamDay.CommonModels\bin\Debug\NLog.xml
+F:\MyWork\TD\TeamDay.CommonModels\obj\Debug\TeamDay.Components.csprojResolveAssemblyReference.cache
+F:\MyWork\TD\TeamDay.CommonModels\obj\Debug\TeamDay.Components.dll
+F:\MyWork\TD\TeamDay.CommonModels\obj\Debug\TeamDay.Components.pdb

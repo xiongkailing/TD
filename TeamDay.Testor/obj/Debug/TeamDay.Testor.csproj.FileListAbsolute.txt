@@ -17,3 +17,8 @@ F:\MyWork\TD\TeamDay.Testor\bin\Debug\zh-Hans\EntityFramework.SqlServer.resource
 F:\MyWork\TD\TeamDay.Testor\obj\Debug\TeamDay.Testor.csprojResolveAssemblyReference.cache
 F:\MyWork\TD\TeamDay.Testor\obj\Debug\TeamDay.Testor.exe
 F:\MyWork\TD\TeamDay.Testor\obj\Debug\TeamDay.Testor.pdb
+F:\MyWork\TD\TeamDay.Testor\bin\Debug\NLog.config
+F:\MyWork\TD\TeamDay.Testor\bin\Debug\NLog.dll
+F:\MyWork\TD\TeamDay.Testor\bin\Debug\TeamDay.Components.dll
+F:\MyWork\TD\TeamDay.Testor\bin\Debug\TeamDay.Components.pdb
+F:\MyWork\TD\TeamDay.Testor\bin\Debug\NLog.xml
