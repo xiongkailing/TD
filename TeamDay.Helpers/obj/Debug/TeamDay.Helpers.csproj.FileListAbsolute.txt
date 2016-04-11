@@ -1,0 +1,4 @@
+F:\MyWork\TD\TeamDay.Helpers\bin\Debug\TeamDay.Helpers.dll
+F:\MyWork\TD\TeamDay.Helpers\bin\Debug\TeamDay.Helpers.pdb
+F:\MyWork\TD\TeamDay.Helpers\obj\Debug\TeamDay.Helpers.dll
+F:\MyWork\TD\TeamDay.Helpers\obj\Debug\TeamDay.Helpers.pdb

@@ -39,8 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserServices\IUserService.cs" />
+    <Compile Include="UserServices\UserService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TeamDay.DAL\TeamDay.DAL.csproj">
+      <Project>{27ceed81-9836-4973-babe-264b9b924cfb}</Project>
+      <Name>TeamDay.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TeamDay.Models\TeamDay.Models.csproj">
+      <Project>{b771afb1-e78e-4a8b-9421-fca437b3ad93}</Project>
+      <Name>TeamDay.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

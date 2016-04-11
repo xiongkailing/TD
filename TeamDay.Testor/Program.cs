@@ -15,18 +15,19 @@ namespace TeamDay.Testor
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(Test.Liu);
             SymmetricAlgorithm mCSP = new TripleDESCryptoServiceProvider(); ;
             mCSP.GenerateIV();
             mCSP.GenerateKey();
-            string iv=Convert.ToBase64String(mCSP.IV);
+            string iv = Convert.ToBase64String(mCSP.IV);
             Console.WriteLine(iv);
-            string privateKey=Convert.ToBase64String(mCSP.Key);
+            string privateKey = Convert.ToBase64String(mCSP.Key);
             Console.WriteLine(privateKey);
             Configuration config = ConfigurationManager.OpenExeConfiguration(Assembly.GetEntryAssembly().Location);
             AppSettingsSection appSettings = (AppSettingsSection)config.GetSection("appSettings");
             appSettings.Settings.Clear();
             appSettings.Settings.Add("pk", privateKey);
-            appSettings.Settings.Add("iv", iv);      
+            appSettings.Settings.Add("iv", iv);
             config.Save();
             ConfigurationManager.RefreshSection("appSettings");
             //Log.WriteLog(NLog.LogLevel.Trace, null, "hello world");
@@ -45,5 +46,11 @@ namespace TeamDay.Testor
             //    repository.Dispose();
             //}
         }
+    }
+    enum Test
+    {
+        Xiong = 1,
+        Li = 2,
+        Liu = 4
     }
 }

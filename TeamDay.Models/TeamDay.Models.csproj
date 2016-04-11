@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EfModels\EfBaseModel.cs" />
+    <Compile Include="EfModels\User.cs" />
+    <Compile Include="EfModels\UserRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RedisModels\RedisBaseModel.cs" />
   </ItemGroup>
