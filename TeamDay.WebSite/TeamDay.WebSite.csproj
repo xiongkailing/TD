@@ -42,22 +42,25 @@
     <Reference Include="Autofac">
       <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\packages\Autofac.Mvc5.3.3.4\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="ServiceStack.Common, Version=3.9.9.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ServiceStack.Common.3.9.11\lib\net35\ServiceStack.Common.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="ServiceStack.Common, Version=3.9.71.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ServiceStack.Common.3.9.71\lib\net35\ServiceStack.Common.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Interfaces, Version=3.9.9.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ServiceStack.Common.3.9.11\lib\net35\ServiceStack.Interfaces.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="ServiceStack.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ServiceStack.Common.3.9.71\lib\net35\ServiceStack.Interfaces.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Redis, Version=3.9.71.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ServiceStack.Redis.3.9.71\lib\net35\ServiceStack.Redis.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="ServiceStack.Redis, Version=3.9.70.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ServiceStack.Redis.3.9.70\lib\net35\ServiceStack.Redis.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Text, Version=4.0.54.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ServiceStack.Text.4.0.54\lib\net40\ServiceStack.Text.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="ServiceStack.Text, Version=3.9.71.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ServiceStack.Text.3.9.71\lib\net35\ServiceStack.Text.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -151,13 +154,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\AuthCookieHelper.cs" />
+    <Compile Include="Infrastructure\DatabaseInitializer.cs" />
+    <Compile Include="Infrastructure\DependencyRegister.cs" />
     <Compile Include="Infrastructure\SecruityConfiguration.cs" />
-    <Compile Include="Infrastructure\VerifyCodeHelper.cs" />
+    <Compile Include="Infrastructure\TeamDayDbContext.cs" />
+    <Compile Include="Infrastructure\UserSession.cs" />
     <Compile Include="Infrastructure\WebConfig.cs" />
     <Compile Include="Models\AccountModels\LoginViewModel.cs" />
     <Compile Include="Models\AccountModels\RegisterViewModel.cs" />
     <Compile Include="Models\AccountModels\VerifyCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionManager\DefaultSessionManageService.cs" />
+    <Compile Include="SessionManager\ISessionManageService.cs" />
+    <Compile Include="SessionManager\RedisSessionManageService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -202,6 +212,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Account\VerifyCode.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Shared\_LoginLayOut.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -214,6 +225,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TeamDay.CommonModels\TeamDay.Components.csproj">
+      <Project>{e456329b-6555-4d9d-b092-aebbe764b602}</Project>
+      <Name>TeamDay.Components</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TeamDay.CoreServices\TeamDay.CoreServices.csproj">
       <Project>{066f6be2-73ef-45fe-af0f-09cf27fc74fa}</Project>
       <Name>TeamDay.CoreServices</Name>
@@ -221,6 +236,10 @@
     <ProjectReference Include="..\TeamDay.DAL\TeamDay.DAL.csproj">
       <Project>{27ceed81-9836-4973-babe-264b9b924cfb}</Project>
       <Name>TeamDay.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TeamDay.EntityFrameworkOrm\TeamDay.EntityFrameworkOrm.csproj">
+      <Project>{cec4bb7d-9c07-4473-aa8d-66b94d4a241d}</Project>
+      <Name>TeamDay.EntityFrameworkOrm</Name>
     </ProjectReference>
     <ProjectReference Include="..\TeamDay.Helpers\TeamDay.Helpers.csproj">
       <Project>{65ba9f27-44e8-4abb-b3c8-f52150d43deb}</Project>

@@ -10,28 +10,42 @@ using TeamDay.WebSite.Infrastructure;
 
 namespace TeamDay.WebSite.Filters
 {
-    public class TeamDayAuthorizeAttribute:AuthorizeAttribute
+    public class TeamDayAuthorizeAttribute : AuthorizeAttribute
     {
         public IUserService userService { get; set; }
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
-            /*identity格式:"用户名|MD5密码|角色|Cookie生成时间"*/
-            var identity = httpContext.Request.Cookies.Get("identity");
-            if (identity != null)
+            /*identity格式:"Code|MD5密码|角色|Cookie生成时间|名称"*/
+            string identity = "";
+            if (httpContext.Session.IsCookieless)
             {
-                string raw = CommonHelper.ReverseDecrypt(identity.Value,WebConfig.PrivateKey,WebConfig.SIV);
-                string[] infos = raw.Split('|');
-                User pwd = this.userService.PasswordValidate(infos[0], infos[1]);
-                if (pwd == null)
+                string encrptInfo = httpContext.Request.QueryString.Get("i");
+                if (string.IsNullOrEmpty(encrptInfo))
                     return false;
                 else
-                {
-                    var role = pwd.Role;
-                    if (string.IsNullOrEmpty(Roles)) { Roles = "Ordinary"; }
-                    return role.ToString() == Roles && infos[2] == Roles;
-                }
+                    identity = encrptInfo;
             }
-            return false;
+            else
+            {
+                var identityCookie = httpContext.Request.Cookies.Get("identity");
+                if (identityCookie != null)
+                {
+                    identity = identityCookie.Value;
+                }
+                else
+                    return false;
+            }
+            string raw = CommonHelper.ReverseDecrypt(identity, WebConfig.PrivateKey, WebConfig.SIV);
+            string[] infos = raw.Split('|');
+            User pwd = this.userService.PasswordValidate(infos[0], infos[1]);
+            if (pwd == null)
+                return false;
+            else
+            {
+                var role = pwd.Role;
+                if (string.IsNullOrEmpty(Roles)) { Roles = "Ordinary"; }
+                return role.ToString() == Roles && infos[2] == Roles;
+            }
         }
 
         protected override void HandleUnauthorizedRequest(AuthorizationContext filterContext)
@@ -47,9 +61,9 @@ namespace TeamDay.WebSite.Filters
                     JsonRequestBehavior = JsonRequestBehavior.AllowGet
                 };
             }
-            string loginUrl = "/Account/Login";
+            string loginUrl = "~/Account/Login";
             //TODO:
-            filterContext.Result = new RedirectResult(loginUrl + "?returnUrl=" + filterContext.HttpContext.Request.Url.PathAndQuery);
+            filterContext.Result = new RedirectResult(loginUrl + "?returnUrl=" + System.Web.HttpUtility.UrlEncode(filterContext.HttpContext.Request.Url.PathAndQuery));
         }
     }
 }

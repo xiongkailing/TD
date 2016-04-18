@@ -2,10 +2,11 @@
 @{
     ViewBag.Title = "Login";
 }
-<div>
-    <input type="text" name="Name"/>
+<form method="post" action="/Account/Login">
+    @Html.AntiForgeryToken()
+    <input type="text" name="Name" />
     <input type="password" name="Password" />
     <input type="checkbox" name="IsRemember" />
-</div>
-
-@Html.Action("VerifyCode")
+    @Html.Action("VerifyCode")
+    <input type="submit" value="登录"/>
+</form>

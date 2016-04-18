@@ -9,5 +9,6 @@ namespace TeamDay.Models.RedisModels
     public abstract class RedisBaseModel
     {
         public string Id { get; set; }
+        public DateTime Time { get; set; }
     }
 }

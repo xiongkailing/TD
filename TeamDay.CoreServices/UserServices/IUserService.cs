@@ -9,7 +9,8 @@ namespace TeamDay.CoreServices.UserServices
 {
     public interface IUserService
     {
-        Task<User> LoginValidate(string nick, string pwd);
-        User PasswordValidate(string name, string pwd);
+        User LoginValidate(string nick, string pwd);
+        User PasswordValidate(string code, string pwd);
+        Task<User> LoginValidateAsync(string nick, string pwd);
     }
 }

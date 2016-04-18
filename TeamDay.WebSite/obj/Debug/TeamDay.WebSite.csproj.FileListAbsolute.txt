@@ -21,9 +21,7 @@ F:\MyWork\TD\TeamDay.WebSite\bin\System.Web.WebPages.Deployment.dll
 F:\MyWork\TD\TeamDay.WebSite\bin\System.Web.WebPages.dll
 F:\MyWork\TD\TeamDay.WebSite\bin\System.Web.WebPages.Razor.dll
 F:\MyWork\TD\TeamDay.WebSite\bin\WebGrease.dll
-F:\MyWork\TD\TeamDay.WebSite\bin\ServiceStack.Common.pdb
 F:\MyWork\TD\TeamDay.WebSite\bin\ServiceStack.Common.xml
-F:\MyWork\TD\TeamDay.WebSite\bin\ServiceStack.Interfaces.pdb
 F:\MyWork\TD\TeamDay.WebSite\bin\ServiceStack.Interfaces.xml
 F:\MyWork\TD\TeamDay.WebSite\bin\ServiceStack.Redis.xml
 F:\MyWork\TD\TeamDay.WebSite\bin\ServiceStack.Text.xml
@@ -64,3 +62,11 @@ F:\MyWork\TD\TeamDay.WebSite\bin\TeamDay.DAL.pdb
 F:\MyWork\TD\TeamDay.WebSite\bin\TeamDay.Helpers.pdb
 F:\MyWork\TD\TeamDay.WebSite\bin\TeamDay.Models.pdb
 F:\MyWork\TD\TeamDay.WebSite\bin\Autofac.xml
+F:\MyWork\TD\TeamDay.WebSite\bin\Autofac.Integration.Mvc.dll
+F:\MyWork\TD\TeamDay.WebSite\bin\TeamDay.Components.dll
+F:\MyWork\TD\TeamDay.WebSite\bin\TeamDay.EntityFrameworkOrm.dll
+F:\MyWork\TD\TeamDay.WebSite\bin\NLog.dll
+F:\MyWork\TD\TeamDay.WebSite\bin\TeamDay.Components.pdb
+F:\MyWork\TD\TeamDay.WebSite\bin\TeamDay.EntityFrameworkOrm.pdb
+F:\MyWork\TD\TeamDay.WebSite\bin\Autofac.Integration.Mvc.xml
+F:\MyWork\TD\TeamDay.WebSite\bin\NLog.xml

@@ -42,7 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsyncResult.cs" />
     <Compile Include="Log.cs" />
+    <Compile Include="NoConfigFoundException.cs" />
     <Compile Include="PageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

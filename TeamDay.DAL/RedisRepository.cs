@@ -10,16 +10,16 @@ namespace TeamDay.DAL
 {
     public class RedisRepository<T> : IRedisRepository<T> where T : RedisBaseModel
     {
-        private readonly IRedisClientsManager _redisClientsManger;
+        protected readonly IRedisClientsManager redisClientsManger;
         private readonly int _id;
         public RedisRepository(IRedisClientsManager redisClientsManger, int id)
         {
-            _redisClientsManger = redisClientsManger;
-            _id = id;
+            this.redisClientsManger = redisClientsManger;
+            this._id = id;
         }
         public void Update(T entity, bool isSave = false, DateTime? expireTime = null)
         {
-            using (var client = _redisClientsManger.GetClient())
+            using (var client = redisClientsManger.GetClient())
             {
                 client.Db = _id;
                 if (expireTime == null)
@@ -36,7 +36,7 @@ namespace TeamDay.DAL
 
         public void Add(T entity, bool isSave = false, DateTime? expireTime = null)
         {
-            using (var client = _redisClientsManger.GetClient())
+            using (var client = redisClientsManger.GetClient())
             {
                 client.Db = _id;
                 if (expireTime == null)
@@ -53,7 +53,7 @@ namespace TeamDay.DAL
 
         public void Delete(string Id)
         {
-            using (IRedisClient client = _redisClientsManger.GetClient())
+            using (IRedisClient client = redisClientsManger.GetClient())
             {
                 client.Db = _id;
                 client.Remove(Id);
@@ -63,7 +63,7 @@ namespace TeamDay.DAL
 
         public IEnumerable<T> Get()
         {
-            using (IRedisClient client = _redisClientsManger.GetClient())
+            using (IRedisClient client = redisClientsManger.GetClient())
             {
                 client.Db = _id;
                 var keys = client.GetAllKeys();
@@ -74,7 +74,7 @@ namespace TeamDay.DAL
 
         public T GetByKey(string id)
         {
-            using (IRedisClient client = _redisClientsManger.GetClient())
+            using (IRedisClient client = redisClientsManger.GetClient())
             {
                 client.Db = _id;
                 return client.Get<T>(id);
@@ -82,7 +82,7 @@ namespace TeamDay.DAL
         }
         public void Dispose()
         {
-            _redisClientsManger.Dispose();
+            redisClientsManger.Dispose();
             GC.SuppressFinalize(this);
         }
     }

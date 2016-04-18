@@ -1,0 +1,14 @@
+F:\MyWork\TD\TeamDay.EntityFrameworkOrm\bin\Debug\TeamDay.EntityFrameworkOrm.dll.config
+F:\MyWork\TD\TeamDay.EntityFrameworkOrm\bin\Debug\TeamDay.EntityFrameworkOrm.dll
+F:\MyWork\TD\TeamDay.EntityFrameworkOrm\bin\Debug\TeamDay.EntityFrameworkOrm.pdb
+F:\MyWork\TD\TeamDay.EntityFrameworkOrm\bin\Debug\EntityFramework.dll
+F:\MyWork\TD\TeamDay.EntityFrameworkOrm\bin\Debug\EntityFramework.SqlServer.dll
+F:\MyWork\TD\TeamDay.EntityFrameworkOrm\bin\Debug\TeamDay.Models.dll
+F:\MyWork\TD\TeamDay.EntityFrameworkOrm\bin\Debug\TeamDay.Models.pdb
+F:\MyWork\TD\TeamDay.EntityFrameworkOrm\bin\Debug\EntityFramework.xml
+F:\MyWork\TD\TeamDay.EntityFrameworkOrm\bin\Debug\EntityFramework.SqlServer.xml
+F:\MyWork\TD\TeamDay.EntityFrameworkOrm\bin\Debug\zh-Hans\EntityFramework.resources.dll
+F:\MyWork\TD\TeamDay.EntityFrameworkOrm\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+F:\MyWork\TD\TeamDay.EntityFrameworkOrm\obj\Debug\TeamDay.EntityFrameworkOrm.csprojResolveAssemblyReference.cache
+F:\MyWork\TD\TeamDay.EntityFrameworkOrm\obj\Debug\TeamDay.EntityFrameworkOrm.dll
+F:\MyWork\TD\TeamDay.EntityFrameworkOrm\obj\Debug\TeamDay.EntityFrameworkOrm.pdb

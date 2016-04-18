@@ -11,9 +11,7 @@ F:\MyWork\TD\TeamDay.DAL\bin\Debug\TeamDay.Models.dll
 F:\MyWork\TD\TeamDay.DAL\bin\Debug\TeamDay.Models.pdb
 F:\MyWork\TD\TeamDay.DAL\bin\Debug\EntityFramework.xml
 F:\MyWork\TD\TeamDay.DAL\bin\Debug\EntityFramework.SqlServer.xml
-F:\MyWork\TD\TeamDay.DAL\bin\Debug\ServiceStack.Common.pdb
 F:\MyWork\TD\TeamDay.DAL\bin\Debug\ServiceStack.Common.xml
-F:\MyWork\TD\TeamDay.DAL\bin\Debug\ServiceStack.Interfaces.pdb
 F:\MyWork\TD\TeamDay.DAL\bin\Debug\ServiceStack.Interfaces.xml
 F:\MyWork\TD\TeamDay.DAL\bin\Debug\ServiceStack.Redis.xml
 F:\MyWork\TD\TeamDay.DAL\bin\Debug\ServiceStack.Text.xml

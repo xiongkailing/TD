@@ -2,3 +2,11 @@ F:\MyWork\TD\TeamDay.Models\bin\Debug\TeamDay.Models.dll
 F:\MyWork\TD\TeamDay.Models\bin\Debug\TeamDay.Models.pdb
 F:\MyWork\TD\TeamDay.Models\obj\Debug\TeamDay.Models.dll
 F:\MyWork\TD\TeamDay.Models\obj\Debug\TeamDay.Models.pdb
+F:\MyWork\TD\TeamDay.Models\bin\Debug\TeamDay.Models.dll.config
+F:\MyWork\TD\TeamDay.Models\bin\Debug\EntityFramework.dll
+F:\MyWork\TD\TeamDay.Models\bin\Debug\EntityFramework.SqlServer.dll
+F:\MyWork\TD\TeamDay.Models\bin\Debug\EntityFramework.xml
+F:\MyWork\TD\TeamDay.Models\bin\Debug\EntityFramework.SqlServer.xml
+F:\MyWork\TD\TeamDay.Models\bin\Debug\zh-Hans\EntityFramework.resources.dll
+F:\MyWork\TD\TeamDay.Models\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+F:\MyWork\TD\TeamDay.Models\obj\Debug\TeamDay.Models.csprojResolveAssemblyReference.cache

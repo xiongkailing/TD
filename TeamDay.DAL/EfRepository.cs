@@ -10,7 +10,7 @@ namespace TeamDay.DAL
 {
     public class EfRepository<T> : IRepository<T> where T : EfBaseModel
     {
-        private readonly DbContext dbContainor;
+        protected readonly DbContext dbContainor;
         public EfRepository(DbContext dbContainor)
         {
             this.dbContainor = dbContainor;
@@ -51,7 +51,7 @@ namespace TeamDay.DAL
 
         public IQueryable<T> Get()
         {
-            return dbContainor.Set<T>().Where(t => t.IsDeleted);
+            return dbContainor.Set<T>().Where(t => !t.IsDeleted);
         }
 
         public T GetByKey(int id)

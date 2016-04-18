@@ -7,9 +7,12 @@ F:\MyWork\TD\TeamDay.CoreServices\bin\Debug\ServiceStack.Interfaces.dll
 F:\MyWork\TD\TeamDay.CoreServices\bin\Debug\TeamDay.DAL.pdb
 F:\MyWork\TD\TeamDay.CoreServices\bin\Debug\TeamDay.Models.pdb
 F:\MyWork\TD\TeamDay.CoreServices\bin\Debug\EntityFramework.xml
-F:\MyWork\TD\TeamDay.CoreServices\bin\Debug\ServiceStack.Interfaces.pdb
 F:\MyWork\TD\TeamDay.CoreServices\bin\Debug\ServiceStack.Interfaces.xml
 F:\MyWork\TD\TeamDay.CoreServices\bin\Debug\zh-Hans\EntityFramework.resources.dll
 F:\MyWork\TD\TeamDay.CoreServices\obj\Debug\TeamDay.CoreServices.csprojResolveAssemblyReference.cache
 F:\MyWork\TD\TeamDay.CoreServices\obj\Debug\TeamDay.CoreServices.dll
 F:\MyWork\TD\TeamDay.CoreServices\obj\Debug\TeamDay.CoreServices.pdb
+F:\MyWork\TD\TeamDay.CoreServices\bin\Debug\TeamDay.Components.dll
+F:\MyWork\TD\TeamDay.CoreServices\bin\Debug\NLog.dll
+F:\MyWork\TD\TeamDay.CoreServices\bin\Debug\TeamDay.Components.pdb
+F:\MyWork\TD\TeamDay.CoreServices\bin\Debug\NLog.xml

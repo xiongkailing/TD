@@ -15,6 +15,7 @@ namespace TeamDay.Testor
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(AppDomain.CurrentDomain.FriendlyName);
             Console.WriteLine(Test.Liu);
             SymmetricAlgorithm mCSP = new TripleDESCryptoServiceProvider(); ;
             mCSP.GenerateIV();

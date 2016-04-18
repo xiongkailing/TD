@@ -1,0 +1,17 @@
+F:\MyWork\TD\TeamDay.WebApis\bin\TeamDay.WebApis.dll.config
+F:\MyWork\TD\TeamDay.WebApis\bin\TeamDay.WebApis.dll
+F:\MyWork\TD\TeamDay.WebApis\bin\TeamDay.WebApis.pdb
+F:\MyWork\TD\TeamDay.WebApis\bin\Newtonsoft.Json.dll
+F:\MyWork\TD\TeamDay.WebApis\bin\System.Net.Http.Formatting.dll
+F:\MyWork\TD\TeamDay.WebApis\bin\System.Web.Http.dll
+F:\MyWork\TD\TeamDay.WebApis\bin\System.Web.Http.WebHost.dll
+F:\MyWork\TD\TeamDay.WebApis\bin\Newtonsoft.Json.xml
+F:\MyWork\TD\TeamDay.WebApis\bin\System.Net.Http.Formatting.xml
+F:\MyWork\TD\TeamDay.WebApis\bin\System.Web.Http.xml
+F:\MyWork\TD\TeamDay.WebApis\bin\System.Web.Http.WebHost.xml
+F:\MyWork\TD\TeamDay.WebApis\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+F:\MyWork\TD\TeamDay.WebApis\bin\zh-Hans\System.Web.Http.resources.dll
+F:\MyWork\TD\TeamDay.WebApis\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+F:\MyWork\TD\TeamDay.WebApis\obj\Debug\TeamDay.WebApis.csprojResolveAssemblyReference.cache
+F:\MyWork\TD\TeamDay.WebApis\obj\Debug\TeamDay.WebApis.dll
+F:\MyWork\TD\TeamDay.WebApis\obj\Debug\TeamDay.WebApis.pdb
